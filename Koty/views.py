@@ -5,4 +5,4 @@ from django.template import loader
 
 def Koty(request):
     template = loader.get_template('Koty.html')
-    return HttpResponse(template.render)
+    return HttpResponse(template.render())
