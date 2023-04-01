@@ -1,5 +1,5 @@
 {% extends "master.html" %}
-
+{% load static %}
 {% block title %}
 
 {% endblock %}
@@ -11,5 +11,6 @@
     <li>  <a href="details/{{ x.id }}"> {{ x.imie }} {{ x.nazwisko }}</a>  </li>
     </ul>
     {% endfor %}
-
+<script src="{% static 'naukaJS.js' %}"></script>
+    <button onclick="myFunction()">Kliknij 1</button>
 {% endblock %}

@@ -6,7 +6,11 @@ from .models import Czlonek
 
 def Koty(request):
     template = loader.get_template('Koty.html')
-    return HttpResponse(template.render())
+    czlonkowie = Czlonek.objects.all().values()
+    context = {
+        'czlonkowie': czlonkowie,
+    }
+    return HttpResponse(template.render(context, request))
 
 def Czlonkowie(request):
     template = loader.get_template('Koty.html')
@@ -18,4 +22,12 @@ def Czlonkowie(request):
 
 def main(request):
     template = loader.get_template('main.html')
-    return HttpResponse(template.render(request))
+    return HttpResponse( template.render({}, request))
+
+def details(request, id):
+    czlonek = Czlonek.objects.get(id=id)
+    template = loader.get_template('details.html')
+    context = {
+        'czlonek' : czlonek,
+    }
+    return HttpResponse(template.render(context, request))
