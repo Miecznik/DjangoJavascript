@@ -46,9 +46,23 @@ function trojkat() {
     const x = 5;
     const y = 6;
     const z = 7;
-    var p = (x + y + z) / 2
-    var pole = Math.sqrt(p*(p-x)*(p-y)*(p-z))
-    alert("Polem trojkata o bokach : " + x + " " + y + " " + z + "Jest: " + pole)
+    var p = (x + y + z) / 2;
+    var pole = Math.sqrt(p*(p-x)*(p-y)*(p-z));
+    alert("Polem trojkata o bokach : " + x + " " + y + " " + z + "Jest: " + pole);
 }
 
-function
+//5. Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front.  Go to the editor
+
+
+function obrot() {
+    var slowo = 'w3resource';
+    for (let m = 0, m < slowo.length, m++) {
+        var litera = slowo.slice(0,-1);
+        slowo = litera + slowo
+
+
+    }
+    alert(slowo)
+
+
+}
