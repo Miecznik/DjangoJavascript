@@ -63,3 +63,53 @@ function obrot() {
     alert(slowo)
 }
 
+//6. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.  Go to the editor
+
+function rokPrzestepny(){
+        const rok = prompt('Podaj rok a ja ustale czy jest przestepny');
+
+
+        if ( (rok % 100 === 0) ? (rok % 100 === 0) : (rok % 4 === 0) ) {
+            alert(" To rok przestepny")
+        }
+        else {
+            alert(" To nie jest rok przestepny")
+        }
+
+
+}
+
+
+// 7. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.  Go to the editor
+
+
+console.log('--------------------');
+for (var year = 2014; year <= 2050; year++)
+    {
+    var d = new Date(year, 0, 1);
+    if ( d.getDay() === 0 )
+        console.log("1st January is being a Sunday  "+year);
+    }
+console.log('--------------------');
+
+//8. Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched".  Go to the editor
+
+function zgadywarka() {
+    const num = Math.ceil(Math.random() * 10);
+    console.log(num);
+    const gnum = prompt('Guess the number between 1 and 10 inclusive');
+    if (gnum == num)
+        alert('Matched');
+    else
+        alert('Not matched, the number was ' + gnum);
+}
+
+// 9. Write a JavaScript program to calculate days left until next Christmas.  Go to the editor
+
+function dniDoSwiat() {
+     data1 = Date.now()
+     data2 = new Date("2023-12-24")
+    swieta = data2 - data1
+    jedenDzien = 1000*60*60*24
+    alert(" do swiat pozostalo :" + (swieta / jedenDzien ) + "Dni")
+}
