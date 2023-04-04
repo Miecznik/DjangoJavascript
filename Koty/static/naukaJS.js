@@ -113,3 +113,17 @@ function dniDoSwiat() {
     jedenDzien = 1000*60*60*24
     alert(" do swiat pozostalo :" + (swieta / jedenDzien ) + "Dni")
 }
+
+// 10. Write a JavaScript program to calculate multiplication and division of two numbers (input from user).  Go to the editor
+
+function dzielenie() {
+    numer1 = document.getElementById("firstNumber").value;
+    numer2 = document.getElementById('secondNumber').value;
+    document.getElementById("wynik").innerHTML = numer1 / numer2
+}
+function mnozenie(){
+    numer1 = document.getElementById("firstNumber").value;
+    numer2 = document.getElementById("secondNumber").value;
+    document.getElementById("wynik").innerHTML = numer1 * numer2
+
+}
