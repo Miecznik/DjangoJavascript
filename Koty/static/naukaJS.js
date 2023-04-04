@@ -56,13 +56,10 @@ function trojkat() {
 
 function obrot() {
     var slowo = 'w3resource';
-    for (let m = 0, m < slowo.length, m++) {
+    for (let i = 0; i<slowo.length; i++) {
         var litera = slowo.slice(0,-1);
         slowo = litera + slowo
-
-
     }
     alert(slowo)
-
-
 }
+

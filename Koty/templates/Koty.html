@@ -5,12 +5,16 @@
 {% endblock %}
 
 {% block content %}
+
+
     <p> Czlonkowie </p>
     <ul>
     {% for x in czlonkowie %}
     <li>  <a href="details/{{ x.id }}"> {{ x.imie }} {{ x.nazwisko }}</a>  </li>
     </ul>
     {% endfor %}
+
+
 <script src="{% static 'naukaJS.js' %}"></script>
     <button onclick="myFunction()">Kliknij 1</button>
     <button onclick="mojaData()"> Zadanie 1, data</button>
