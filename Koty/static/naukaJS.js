@@ -127,3 +127,13 @@ function mnozenie(){
     document.getElementById("wynik").innerHTML = numer1 * numer2
 
 }
+
+
+// 11. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.  Go to the editor
+
+function celToFar() {
+    celciusz = document.getElementById("celciusz").value;
+    faren = document.getElementById("faren").value;
+    document.getElementById("wynikCelciusz").innerHTML = (faren-32)/9;
+    document.getElementById("wynikFaren").innerHTML = celciusz/5;
+}
