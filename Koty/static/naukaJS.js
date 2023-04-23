@@ -137,3 +137,24 @@ function celToFar() {
     document.getElementById("wynikCelciusz").innerHTML = (faren-32)/9;
     document.getElementById("wynikFaren").innerHTML = celciusz/5;
 }
+ // cwiczenia z palindromu
+function pali() {
+    test = "ababa"
+    test1 = test[0];
+    alert(test1);
+}
+
+//12. Write a JavaScript program to get the website URL (loading page).  Go to the editor
+
+function adress() {
+    alert(document.URL)
+}
+
+//13. Write a JavaScript exercise to create a variable using a user-defined name.  Go to the editor
+
+function nazwaZmiennej() {
+    var nazwa = document.getElementById("nazwaZmiennej").value;
+    var wartosc = document.getElementById("wartosc").value;
+    this[nazwa] = wartosc;
+    alert(this[nazwa])
+}
