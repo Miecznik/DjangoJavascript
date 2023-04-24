@@ -158,3 +158,13 @@ function nazwaZmiennej() {
     this[nazwa] = wartosc;
     alert(this[nazwa])
 }
+
+function roznica13() {
+    var liczba = document.getElementById("liczba").value;
+    if (Math.abs(liczba - 13) > 13) {
+        alert(Math.abs(liczba - 13) * 2);
+    }
+    else {
+        alert(Math.abs(liczba - 13))
+    }
+}
