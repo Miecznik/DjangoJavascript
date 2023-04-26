@@ -168,3 +168,20 @@ function roznica13() {
         alert(Math.abs(liczba - 13))
     }
 }
+
+//16. Write a JavaScript program to compute the sum of the two given integers. If the two values are the same, then return triple their sum.  Go to the editor
+
+function suma() {
+
+    let war1 = document.getElementById("wartosc1").value;
+    let war2 = document.getElementById("wartosc2").value;
+    let suma = parseInt(war1) + parseInt(war2);
+    if (war1 == war2) {
+
+        alert("suma " + war1 + " i " + war2 + " to" + suma * 3);
+    }
+    else alert("suma " + war1 + " i " + war2 + " to " + suma)
+
+
+}
+
