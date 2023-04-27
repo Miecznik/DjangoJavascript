@@ -185,3 +185,17 @@ function suma() {
 
 }
 
+//17. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple the absolute difference if the specified number is greater than 19.  Go to the editor
+
+function difference() {
+
+    let base = document.getElementById("zmienna1").value;
+
+    let difference = base - 19;
+    difference = Math.abs(difference);
+    if (base>19) {
+        difference = difference * 3;
+    }
+    alert("difference between 19 and " + base + " is " + difference)
+
+}
