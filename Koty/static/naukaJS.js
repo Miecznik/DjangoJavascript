@@ -218,3 +218,48 @@ function fifty() {
 
     alert("Wynikiem jest" + wynik)
 }
+
+//19. Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.  Go to the editor
+
+function within(x) {
+    return ((Math.abs(100-x) <= 20) || (Math.abs(400-x) <= 20) )
+}
+
+console.log(within(10))
+console.log(within(90))
+console.log(within(99))
+console.log(within(199))
+console.log(within(200))
+
+
+function negpos(x,y) {
+    return ((x>0) && (y<0)) || ((x<0) && (y>0))
+}
+console.log("20. Write a JavaScript program to check two given integers whether one is positive and another one is negative.")
+
+console.log(negpos(10,-10))
+console.log(negpos(-10,10))
+console.log(negpos(10,10))
+console.log(negpos(-10,-10))
+
+
+//21. Write a JavaScript program to create another string by adding "Py" in front of a given string. If the given string begins with "Py" return the original string.  Go to the editor
+
+function addPY(x) {
+    let warunek = x.slice(0,2);
+    if (warunek == "Py") {
+        return x;
+    }
+    else {
+        return ("Py" + x);
+    }
+    console.log(warunek);
+    console.log(x);
+
+
+}
+console.log(addPY("Pycharm"));
+console.log(addPY("charm"));
+console.log(addPY("Google"));
+
+
