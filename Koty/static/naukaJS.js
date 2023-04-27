@@ -199,3 +199,22 @@ function difference() {
     alert("difference between 19 and " + base + " is " + difference)
 
 }
+
+
+//18. Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.  Go to the editor
+
+function fifty() {
+    let liczba1 = document.getElementById("fifty1").value;
+    let liczba2 = document.getElementById("fifty2").value;
+    let wynik = false;
+    if ((parseInt(liczba1) + parseInt(liczba2)) == 50) {
+        wynik = true;
+    }
+    else if ((parseInt(liczba1) == 50) || (parseInt(liczba2) == 50)) {
+        wynik = true;
+    }
+
+    console.log(liczba2 + liczba1);
+
+    alert("Wynikiem jest" + wynik)
+}
