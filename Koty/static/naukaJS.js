@@ -262,4 +262,16 @@ console.log(addPY("Pycharm"));
 console.log(addPY("charm"));
 console.log(addPY("Google"));
 
+//22. Write a JavaScript program to remove a character at the specified position in a given string and return the modified string.  Go to the editor
 
+function remover(word,y) {
+    var part1 = word.substring(0, y);
+    var part2 = word.substring(y+1, word.length)
+    console.log(part1+part2)
+
+
+}
+
+remover("trzeci", 2)
+remover("trzeci", 3)
+remover("trzeci", 4)
