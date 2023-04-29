@@ -275,3 +275,56 @@ function remover(word,y) {
 remover("trzeci", 2)
 remover("trzeci", 3)
 remover("trzeci", 4)
+
+
+//23. Write a JavaScript program to create a new string from a given string by changing the position of the first and last characters. The string length must be broader than or equal to 1.  Go to the editor
+
+function changer(word) {
+    var lit1 = word.slice(0,1);
+    var lit2 = word.slice(word.length -1, word.length);
+    var srodek = word.substring(1,word.length -1);
+    console.log(lit2 + srodek + lit1);
+}
+
+changer("Pierwszy");
+changer("Drugi");
+changer("Trzeci");
+changer("Czwarty");
+
+
+//24. Write a JavaScript program to create another string from a given string with the first character of the given string added to the front and back.  Go to the editor
+
+function frontAndBack(word) {
+
+    var litera = word.slice(0,1);
+    var wynik = litera + word + litera;
+    console.log(wynik);
+
+}
+
+frontAndBack("pierwszy");
+frontAndBack("Drugi");
+frontAndBack("Trzeci");
+frontAndBack("Czwarty");
+
+
+//25. Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.  Go to the editor
+
+function mult(x) {
+
+    if ((x%3) == 0) {
+        return true;
+    }
+    else if ((x%7) == 0) {
+        return true;
+    }
+    else return false
+}
+
+console.log(mult(3));
+console.log(mult(7));
+console.log(mult(10));
+console.log(mult(12));
+console.log(mult(14));
+console.log(mult(17));
+
