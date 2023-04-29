@@ -328,3 +328,133 @@ console.log(mult(12));
 console.log(mult(14));
 console.log(mult(17));
 
+
+
+//26. Write a JavaScript program to create a string from a given string. This is done by taking the last 3 characters and adding them at both the front and back. The string length must be 3 or more.  Go to the editor
+
+function newString(word) {
+
+    if (word.length <= 3) {
+        return console.log("This string is too short");
+    }
+    var ret = word.slice(word.length - 3);
+    return console.log(ret + word + ret)
+}
+
+newString("Pierwszy")
+newString("Dwa")
+newString("Tzeci")
+newString("1")
+
+//27. Write a JavaScript program to check whether a string starts with 'Java' if it does not otherwise.  Go to the editor
+
+function newJava(word) {
+
+    var test = word.slice(0,4)
+    if (test == "Java") {
+        return true;
+    }
+    else {
+        return false
+    }
+
+}
+
+console.log(newJava("Java to chuj"))
+console.log(newJava("Java to wyspa"))
+console.log(newJava("Nie ma Javy"))
+
+//28. Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if either of them falls within the range.  Go to the editor
+
+function piedziesiat99(x,y) {
+
+    if ((x >= 50) && (x <= 99)) {
+        return true;
+    }
+    else if ((y >= 50) && (y <= 99)) {
+        return true;
+    }
+    else return false
+
+}
+console.log(" zadanie 28:")
+console.log(piedziesiat99(45,67))
+console.log(piedziesiat99(1,2))
+console.log(piedziesiat99(55,55))
+console.log(piedziesiat99(45,105))
+
+
+//29. Write a JavaScript program to check whether three given integer values are in the range 50..99 (inclusive). Return true if one or more of them are in the specified range.  Go to the editor
+
+function piedziesiat992(x,y,z) {
+
+    if ((x >= 50) && (x <= 99)) {
+        return true;
+    }
+    else if ((y >= 50) && (y <= 99)) {
+        return true;
+    }
+    else if ((z >= 50) && (z <= 99)) {
+        return true;
+    }
+    else return false
+
+}
+
+
+console.log(" zadanie 29:")
+
+console.log(piedziesiat992(45,67, 44))
+console.log(piedziesiat992(50,67, 76))
+console.log(piedziesiat992(99,99,99))
+console.log(piedziesiat992(111,111,111))
+
+
+//30. Write a JavaScript program to check whether a string "Script" appears at the 5th (index 4) position in a given string. If "Script" appears in the string, return the string without "Script" otherwise return the original one.
+
+function scri(word) {
+    let zmienna = word.split(" ");
+    console.log(zmienna);
+    console.log(zmienna[4]);
+
+    if (zmienna[4] == "Script") {
+        delete zmienna[4];
+    }
+    return zmienna.join(" ");
+}
+
+console.log(scri("In great word of Script there exists a man "))
+
+
+//31. Write a JavaScript program to find the largest of three given integers.  Go to the editor
+
+function largest(x,y,z) {
+    return Math.max(x,y,z)
+}
+console.log("Zadanie 31");
+console.log(largest(2,3,4));
+console.log(largest(5,6,7));
+
+//32. Write a JavaScript program to find the closest value to 100 from two numerical values.  Go to the editor
+
+function closest(x,y) {
+
+    if (Math.abs(x - 100) < Math.abs(y-100)) {
+
+        return x;
+
+    }
+    else if (Math.abs(x - 100) == Math.abs(y-100)){
+        return console.log("Rowne")
+    }
+    else return y;
+
+}
+console.log("Zadanie 32");
+
+console.log(closest(89,110));
+console.log(closest(89,90));
+
+console.log(closest(0,200));
+
+
