@@ -458,3 +458,18 @@ console.log(closest(89,90));
 console.log(closest(0,200));
 
 
+//33. Write a JavaScript program to check whether two numbers are in the range 40..60 or 70..100 inclusive.  Go to the editor
+
+function ranges(x,y) {
+
+    if (((x>=40) && (x<=60)) && ((y>=70) && (y<=100))) {
+
+        return true;
+    }
+    else return false;
+
+}
+console.log("Zadanie 33");
+
+console.log(ranges(70, 80))
+console.log(ranges(60,80))
