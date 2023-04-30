@@ -473,3 +473,98 @@ console.log("Zadanie 33");
 
 console.log(ranges(70, 80))
 console.log(ranges(60,80))
+
+
+
+//34. Write a JavaScript program to find the largest number from the two given positive integers. The two numbers are in the range 40..60 inclusive.  Go to the editor
+function largest(x,y) {
+
+    if ((x>60 || x<40) || (y>60 || y<40) ){
+
+        return "either or both inputs are out of bound of range between 40 and 60"
+
+    }
+    else {
+        if (x>y) {
+            return x
+        }
+        if (y>x) {
+            return y
+        }
+
+
+    }
+
+}
+console.log("Zadanie 34");
+
+console.log(largest(40,50))
+console.log(largest(60,50))
+console.log(largest(100,50))
+
+
+//35. Write a program to check whether a specified character exists between the 2nd and 4th positions in a given string.  Go to the editor
+
+function characterCheck(word, cha) {
+
+    if (word[1] == cha) { return true }
+    else if (word[2] == cha) { return true }
+    else if (word[3] == cha) { return true }
+    else return false;
+
+
+}
+console.log("Zadanie 35");
+console.log(characterCheck("slowo", "s"));
+
+// cwiczenie wlasne
+
+function makeCounter() {
+
+    var i = 0;
+
+    return function() {
+        console.log(i++)
+    }
+
+}
+
+var counter = makeCounter();
+counter();
+counter();
+
+//36. Write a JavaScript program that checks whether the last digit of three positive integers is the same.  Go to the editor
+
+function digits(x,y,z) {
+
+    if (x>0 && y>0 && z>0) {
+
+        return (x % 10 == y % 10 && y % 10 == z % 10 && z % 10 == x % 10)
+
+    }
+    else return false;
+}
+console.log("Zadanie 36");
+console.log(digits(10,100,1000));
+console.log(digits(11,100,1000));
+console.log(digits(20,230,1230));
+console.log(digits(20,230,-1230));
+console.log(digits(20,230,1231));
+
+//37. Write a JavaScript program to produce a new string that has the first 3 characters in lower case from a given string. If the string length is less than 3 convert all the characters to upper case.  Go to the editor
+
+
+function lowerCa(word) {
+
+    if (word.length <= 3) {
+        return word.toUpperCase();
+    }
+    else {
+        var retword = word.substring(0,3);
+        retword = retword.toLowerCase();
+        var retword1 = word.replace(/^[a-zA-Z0-9]{3}/g, "")
+        return retword + retword1
+    }
+
+}
+console.log(lowerCa("Epidemia"))
