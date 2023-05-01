@@ -568,3 +568,21 @@ function lowerCa(word) {
 
 }
 console.log(lowerCa("Epidemia"))
+
+
+//38. Write a JavaScript program to check a student's total marks in various examinations. The student will get A+ grade if the total marks are in the range 89..100 inclusive, if the examination is "Final-exam" the student will receive A+ grade and total marks must be greater than or equal to 90. If the student gets an A+ grade, return true, otherwise return false.
+
+function examination(totMarks, finExam) {
+
+if (finExam) {
+
+    return totMarks >= 90;
+
+}
+
+return (totMarks >= 89 && totMarks <= 100);
+}
+
+
+
+
