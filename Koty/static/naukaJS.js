@@ -583,6 +583,27 @@ if (finExam) {
 return (totMarks >= 89 && totMarks <= 100);
 }
 
+console.log(examination(70,50))
+console.log(examination(90,90))
+console.log(examination(100,100))
 
 
+
+//39. Write a JavaScript program to compute the sum of the two given integers. If the sum is in the range 50..80 return 65 otherwise return 80.  Go to the editor
+
+function sumNew(x,y) {
+
+    z = x + y;
+    if ((z >= 50) && (z<=80)) {
+
+        return 65
+    }
+    else return 80;
+}
+
+console.log("Zadanie 39");
+
+console.log(sumNew(50,60));
+console.log(sumNew(20,30));
+console.log(sumNew(70,75));
 
