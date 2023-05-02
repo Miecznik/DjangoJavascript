@@ -607,3 +607,22 @@ console.log(sumNew(50,60));
 console.log(sumNew(20,30));
 console.log(sumNew(70,75));
 
+
+//40. Write a JavaScript program to check from two given integers whether one of them is 8 or their sum or difference is 8.  Go to the editor
+
+function checker(x,y) {
+
+    if ((x == 8) || (y == 8)) {return true}
+    else if ((x + y) == 8) {return true}
+    else if ((Math.abs((x - y)) == 8) || (Math.abs((y - x))) == 8) {return true}
+    else return false
+
+}
+
+console.log("Zadanie 40");
+console.log(checker(4,4));
+console.log(checker(8,8));
+console.log(checker(2,3));
+console.log(checker(0,10));
+
+
