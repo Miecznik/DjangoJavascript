@@ -641,5 +641,90 @@ console.log(three_numbers(10,10,10));
 console.log(three_numbers(10,10,10));
 console.log(three_numbers(10,10,10));
 
+//42. Write a JavaScript program to check whether three given numbers are increasing in strict or in soft mode.  Go to the editor
+
+function softOrStrict(x,y,z) {
+
+    if (y>x && z > y) {return console.log("Strict")}
+    else if (z > x) {return console.log("Soft")}
+    else {return console.log("does not increase: False")}
+
+}
+console.log("Zadanie 42");
+
+softOrStrict(1,2,3)
+
+softOrStrict(1,1,3)
+softOrStrict(3,2,1)
+
+//43. Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.  Go to the editor
+
+function rightmost(x,y,z) {
+    xmod = x % 10;
+    ymod = y % 10;
+    zmod = z % 10;
+    if (x < 0 || y < - 0 || z < 0) {return console.log(" one or more of numbers is less than zero")}
+    else if ((xmod == ymod) && (ymod == zmod)) {return console.log("all of digits have the same rightmost digit")}
+    else if ((xmod == ymod) || (ymod == zmod) || (zmod == xmod)) {return console.log("at least two of numbers have the same rightmost digit")}
+    else return (console.log("None of numbers have the same rightmost digit"))
 
 
+}
+console.log("Zadanie 43");
+rightmost(10,20,30)
+rightmost(100,200,300)
+rightmost(101,201,302)
+rightmost(101,202,303)
+
+
+
+//44. Write a JavaScript program to check from three given integers whether a number is greater than or equal to 20. It is less than the others.  Go to the editor
+
+function greater20(x,y,z) {
+
+    return console.log((x>=20 && (x<y || x<z)) || (y>=20 && (y<x || y<z)) || (z>=20 && (z<y || z<x)))
+
+}
+console.log("Zadanie 44");
+greater20(20,30,40);
+greater20(20,20,20);
+greater20(40,40,50);
+greater20(10,10,10);
+
+//45. Write a JavaScript program that checks two integer values and returns true if either one is 15 or if their sum or difference is 15.  Go to the editor
+
+function isOrSum15(x,y) {
+
+    if (x == 15 || y == 15) {return true}
+    else if ((x + y == 15) || (Math.abs(x-y) == 15)) {return true}
+    else return false
+}
+
+console.log("Zadanie 45");
+console.log(isOrSum15(0,0))
+console.log(isOrSum15(7,8))
+console.log(isOrSum15(15,0))
+console.log(isOrSum15(30,15))
+console.log(isOrSum15(8,8))
+
+//46. Write a JavaScript program to check two given non-negative integers if one (not both) is a multiple of 7 or 11.  Go to the editor
+
+
+function multitudeOf7Or11(x,y) {
+
+    if (x<0 || y<0) {return false};
+
+    if ((x%7 == 0 && y%7 == 0) || (x%11 == 0 && y%11 == 0)) {return false}
+    else if ((x%7 == 0 || y%7 == 0) || (x%11 == 0 || y%11 == 0)) {return true}
+    else return false
+
+
+}
+
+console.log("Zadanie 45");
+console.log(multitudeOf7Or11(7,7))
+console.log(multitudeOf7Or11(11,11))
+console.log(multitudeOf7Or11(7,12))
+console.log(multitudeOf7Or11(-1,-1))
+console.log(multitudeOf7Or11(14,6))
+console.log(multitudeOf7Or11(22,5))
