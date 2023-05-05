@@ -721,10 +721,146 @@ function multitudeOf7Or11(x,y) {
 
 }
 
-console.log("Zadanie 45");
+console.log("Zadanie 46");
 console.log(multitudeOf7Or11(7,7))
 console.log(multitudeOf7Or11(11,11))
 console.log(multitudeOf7Or11(7,12))
 console.log(multitudeOf7Or11(-1,-1))
 console.log(multitudeOf7Or11(14,6))
 console.log(multitudeOf7Or11(22,5))
+
+
+//47. Write a JavaScript program to check whether a given number exists in the range 40..10000.  Go to the editor
+
+function exists(x) {
+    return (x>= 40 && x<= 10000)
+}
+console.log("Zadanie 47");
+
+console.log(exists(30))
+console.log(exists(50))
+console.log(exists(10000))
+console.log(exists(10001))
+
+//48. Write a JavaScript program to reverse a given string.  Go to the editor
+
+function stringReversal(word) {
+
+    return word.split("").reverse().join("")
+
+
+}
+console.log("Zadanie 48");
+console.log(stringReversal("Kogut"))
+
+//49. Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.  Go to the editor
+
+function charReplacement(word) {
+/*
+    replaced = word.split("")
+    console.log(replaced)
+
+    for (i=0; i<=replaced.length - 1; i++) {
+        replaced[i] = replaced.charCodeAt(i)
+
+
+
+    }
+    replaced = replaced.join("")
+    console.log(replaced)
+*/
+    replaced = word.split()
+    console.log("charcode w 0 pozycji indeksu string word to: " + word.charCodeAt(0))
+    for (let i=0; i<=word.length -1; i++) {
+        replaced[i] = word.charCodeAt(i)
+        replaced[i] = replaced[i] + 1;
+        replaced[i] = String.fromCharCode(replaced[i])
+    }
+    replaced = replaced.join("")
+        console.log(replaced)
+
+}
+
+console.log("Zadanie 49");
+charReplacement("Pies")
+charReplacement("Glowa")
+charReplacement("Zz9")
+
+
+//50. Write a JavaScript program to capitalize the first letter of each word in a given string.  Go to the editor
+
+function upperWord(word) {
+    effectOfFunction = word.split("")
+    console.log(effectOfFunction)
+    effectOfFunction[0] = effectOfFunction[0].toUpperCase()
+    console.log(effectOfFunction)
+    effectOfFunction = effectOfFunction.join("")
+    return effectOfFunction
+
+    //return word.split("").map(function(x){return x.toUpperCase();}).join("")
+   // return word.split("").at(0).toUpperCase().join("")
+
+}
+
+console.log("Zadanie 50");
+console.log(upperWord("pies"))
+
+
+//51. Write a JavaScript program to convert a given number into hours and minutes.  Go to the editor
+
+function hoursMinutes(x) {
+
+    hours = Math.floor(x/60)
+    minutes = x % 60
+    return hours + ":" + minutes
+
+}
+console.log("Zadanie 51 ");
+
+console.log(hoursMinutes(350))
+
+//Write a JavaScript program to convert letters of a given string alphabetically.
+
+function alphabetically(word) {
+
+    sorted = word.split("").sort().join("");
+    return sorted
+}
+
+console.log("Zadanie 52 ");
+console.log(alphabetically("Python"))
+
+//53. Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.  Go to the editor
+
+function whiteSpaces(word) {
+
+    return /a...b/.test(word) || /b...a/.test(word)
+
+}
+
+
+console.log("Zadanie 53 ");
+console.log(whiteSpaces("abecadlo"))
+console.log(whiteSpaces("Chainsbreak"))
+
+//54. Write a JavaScript program to count the number of vowels in a given string.  Go to the editor
+
+function vovels(word) {
+
+    tool = word.split("");
+    number = 0;
+    for (var i = 0; i<= tool.length; i++) {
+
+        if (tool[i] == "a" || tool[i] == "e" || tool[i] == "i" || tool[i] == "o" || tool[i] == "u") {
+            number +=1
+
+        }
+
+    }
+    return number
+
+}
+
+
+console.log(vovels("abecadlo"))
+console.log(vovels("Chainsbreakaa"))
